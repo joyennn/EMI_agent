@@ -1,8 +1,3 @@
-!pip install -q anthropic
-!pip install -q google-generativeai
-!pip install -q openai
-!pip install -q transformers
-
 import os
 import json
 import csv
