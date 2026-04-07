@@ -29,6 +29,7 @@ llama_client = InferenceClient(
     token=HUGGINGFACE_API_KEY
 )
 
+
 # ================================
 # 2. Prompt
 # ================================
@@ -47,10 +48,12 @@ def high_econ_base():
     - Teacher: a Korean L1 teacher with 8 years of teaching experience
     - Students: Korean L1 learners of English
 
-    Given the class information, infer the topic and context of the conversation solely based on the exchange. Then, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
+
 
 def high_econ_int():
     return """
@@ -67,8 +70,10 @@ def high_econ_int():
     Language-related episodes (LREs) can occur:
     - Pre-emptively: the teacher provides explanations or guidance about language use without any errors.
     - Reactively: in response to student errors or comprehension problems, the teacher may reformulate the student's utterance, request clarification, prompt self-correction, or explicitly correct the error.
+    - Language focus: vocabulary (general/technical), grammar, pronunciation, expressions
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
@@ -85,13 +90,16 @@ def high_econ_freq():
     - Teacher: a Korean L1 teacher with 8 years of teaching experience
     - Students: Korean L1 learners of English
 
-    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 10–11 turns (about 9–10% of the interaction).
+    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 10–11 turns (about 9–10% of the interaction) of the classroom discourse.
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
 
+
+#0406version
 def high_econ_int_freq():
     return """
     You are a context-aware conversational agent.
@@ -104,13 +112,15 @@ def high_econ_int_freq():
     - Teacher: a Korean L1 teacher with 8 years of teaching experience
     - Students: Korean L1 learners of English
 
-    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 10–11 turns (about 9–10% of the interaction).
+    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 10–11 turns (about 9–10% of the interaction) of the classroom discourse.
 
     Language-related episodes (LREs) can occur:
     - Pre-emptively: the teacher provides explanations or guidance about language use without any errors.
     - Reactively: in response to student errors or comprehension problems, the teacher may reformulate the student's utterance, request clarification, prompt self-correction, or explicitly correct the error.
+    - Language focus: vocabulary (general/technical), grammar, pronunciation, expressions
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
@@ -130,10 +140,12 @@ def high_math_base():
     - Teacher: an English L1 teacher with 7 years of teaching experience
     - Students: Korean L1 learners of English
 
-    Given the class information, infer the topic and context of the conversation solely based on the exchange. Then, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
+
 
 def high_math_int():
     return """
@@ -150,11 +162,14 @@ def high_math_int():
     Language-related episodes (LREs) can occur:
     - Pre-emptively: the teacher provides explanations or guidance about language use without any errors.
     - Reactively: in response to student errors or comprehension problems, the teacher may reformulate the student's utterance, request clarification, prompt self-correction, or explicitly correct the error.
+    - Language focus: vocabulary (general/technical), grammar, pronunciation, expressions
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
+
 
 def high_math_freq():
     return """
@@ -168,12 +183,14 @@ def high_math_freq():
     - Teacher: an English L1 teacher with 7 years of teaching experience
     - Students: Korean L1 learners of English
 
-    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 10–11 turns (about 9–10% of the interaction).
+    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 10–11 turns (about 9–10% of the interaction) of the classroom discourse.
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
+
 
 def high_math_int_freq():
     return """
@@ -187,13 +204,15 @@ def high_math_int_freq():
     - Teacher: an English L1 teacher with 7 years of teaching experience
     - Students: Korean L1 learners of English
 
-    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 10–11 turns (about 9–10% of the interaction).
+    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 10–11 turns (about 9–10% of the interaction) of the classroom discourse.
 
     Language-related episodes (LREs) can occur:
     - Pre-emptively: the teacher provides explanations or guidance about language use without any errors.
     - Reactively: in response to student errors or comprehension problems, the teacher may reformulate the student's utterance, request clarification, prompt self-correction, or explicitly correct the error.
+    - Language focus: vocabulary (general/technical), grammar, pronunciation, expressions
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
@@ -213,10 +232,12 @@ def uni_acc_base():
     - Teacher: a Chinese L1 teacher with 6 years of teaching experience
     - Students: Korean L1 learners of English
 
-    Given the class information, infer the topic and context of the conversation solely based on the exchange. Then, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
+
 
 def uni_acc_int():
     return """
@@ -233,8 +254,10 @@ def uni_acc_int():
     Language-related episodes (LREs) can occur:
     - Pre-emptively: the teacher provides explanations or guidance about language use without any errors.
     - Reactively: in response to student errors or comprehension problems, the teacher may reformulate the student's utterance, request clarification, prompt self-correction, or explicitly correct the error.
+    - Language focus: vocabulary (general/technical), grammar, pronunciation, expressions
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
@@ -251,9 +274,10 @@ def uni_acc_freq():
     - Teacher: a Chinese L1 teacher with 6 years of teaching experience
     - Students: Korean L1 learners of English
 
-    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 30-40 turns (about 2-3% of the interaction).
+    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 30-40 turns (about 2-3% of the interaction) of the classroom discourse.
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
@@ -270,13 +294,15 @@ def uni_acc_int_freq():
     - Teacher: a Chinese L1 teacher with 6 years of teaching experience
     - Students: Korean L1 learners of English
 
-    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 30-40 turns (about 2-3% of the interaction).
+    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 30-40 turns (about 2-3% of the interaction) of the classroom discourse.
 
     Language-related episodes (LREs) can occur:
     - Pre-emptively: the teacher provides explanations or guidance about language use without any errors.
     - Reactively: in response to student errors or comprehension problems, the teacher may reformulate the student's utterance, request clarification, prompt self-correction, or explicitly correct the error.
+    - Language focus: vocabulary (general/technical), grammar, pronunciation, expressions
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
@@ -296,10 +322,12 @@ def uni_math_base():
     - Teacher: an English L1 teacher with 7 years of teaching experience
     - Students: Korean L1 learners of English
 
-    Given the class information, infer the topic and context of the conversation solely based on the exchange. Then, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
+
 
 def uni_math_int():
     return """
@@ -316,8 +344,10 @@ def uni_math_int():
     Language-related episodes (LREs) can occur:
     - Pre-emptively: the teacher provides explanations or guidance about language use without any errors.
     - Reactively: in response to student errors or comprehension problems, the teacher may reformulate the student's utterance, request clarification, prompt self-correction, or explicitly correct the error.
+    - Language focus: vocabulary (general/technical), grammar, pronunciation, expressions
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
@@ -334,9 +364,10 @@ def uni_math_freq():
     - Teacher: an English L1 teacher with 7 years of teaching experience
     - Students: Korean L1 learners of English
 
-    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 30-40 turns (about 2-3% of the interaction).
+    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 30-40 turns (about 2-3% of the interaction) of the classroom discourse.
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
@@ -353,13 +384,15 @@ def uni_math_int_freq():
     - Teacher: an English L1 teacher with 7 years of teaching experience
     - Students: Korean L1 learners of English
 
-    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 30-40 turns (about 2-3% of the interaction).
+    In this classroom setting, language-related episodes (LREs) tend to occur approximately every 30-40 turns (about 2-3% of the interaction) of the classroom discourse.
 
     Language-related episodes (LREs) can occur:
     - Pre-emptively: the teacher provides explanations or guidance about language use without any errors.
     - Reactively: in response to student errors or comprehension problems, the teacher may reformulate the student's utterance, request clarification, prompt self-correction, or explicitly correct the error.
+    - Language focus: vocabulary (general/technical), grammar, pronunciation, expressions
 
-    Given the class information, continue the conversation in a natural and contextually appropriate way. Maintain the same alternating speaker pattern and conversational style.
+    Given the class information, continue the classroom conversation in a natural and contextually appropriate way with LREs embedded. Maintain the same alternating speaker pattern and conversational style.
+    Make up the classroom discourse relevant to the subject. Do not repeat utterance once it is made. Embed LREs in the classroom discourse referring to the original LREs. Do not repeat LREs once they are made.
 
     Continue the dialogue:
     """
