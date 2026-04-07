@@ -99,7 +99,6 @@ def high_econ_freq():
     """
 
 
-#0406version
 def high_econ_int_freq():
     return """
     You are a context-aware conversational agent.
